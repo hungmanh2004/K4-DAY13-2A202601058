@@ -4,13 +4,16 @@ slis:
   latency_p95_ms:
     objective: 3000
     target: 99.5
-    note: Replace with your group's target
+    note: At least 99.5% of requests should complete within 3 seconds.
   error_rate_pct:
     objective: 2
     target: 99.0
+    note: Keep failed requests at or below 2% over the measurement window.
   daily_cost_usd:
     objective: 2.5
     target: 100.0
+    note: The practice workload must stay within the daily cost budget.
   quality_score_avg:
     objective: 0.75
     target: 95.0
+    note: The mean quality proxy should remain at or above 0.75.
