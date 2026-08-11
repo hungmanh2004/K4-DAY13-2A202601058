@@ -63,43 +63,10 @@ Challenge ID: day13-k4-observability-v1
 
 ## 7. Đóng góp cá nhân
 
-Tên thành viên sẽ được bổ sung sau; nhiệm vụ đã được chia thành 5 mảng độc lập như sau.
-
-| Thành viên    | Phần việc                                                                                                               | Commit/PR            | Điều đã học                                                                                                            |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [Bổ sung tên] | Hoàn thiện JSON logging, correlation ID, metadata và cơ chế redaction PII; kiểm tra log schema.                     | [Bổ sung commit/PR] | Biết cách thiết kế log có cấu trúc, truy vết request xuyên suốt và bảo vệ dữ liệu nhạy cảm.                |
-| [Bổ sung tên] | Tạo và kiểm tra traces; triển khai prompt v1/v2, label, version metadata và rollback.                                | [Bổ sung commit/PR] | Hiểu cách dùng trace để phân tích từng span và quản lý vòng đời prompt version.                               |
-| [Bổ sung tên] | Xây dựng 6 dashboard panels, SLO, threshold, alert rules và runbook xử lý sự cố.                                   | [Bổ sung commit/PR] | Biết chuyển log thành metrics, thiết kế SLO có ngưỡng đo được và viết alert theo triệu chứng người dùng. |
-| [Bổ sung tên] | Chạy challenge`rag_slow`, điều tra theo luồng Metrics → Traces → Logs, xác định root cause và đề xuất fix. | [Bổ sung commit/PR] | Biết điều tra incident dựa trên bằng chứng thay vì chỉ dựa vào phỏng đoán từ tên lỗi nội bộ.             |
-| [Bổ sung tên] | Tích hợp API, chạy load test/validator/test suite, thu thập evidence và tổng hợp báo cáo/demo.                   | [Bổ sung commit/PR] | Hiểu quy trình kiểm chứng end-to-end và cách trình bày kết quả kỹ thuật có thể kiểm tra lại.                |
-| [Bổ sung tên] | API integration, test và tổng hợp evidence                                                                             | [Bổ sung commit/PR] | Kiểm thử hệ thống, kiểm tra luồng end-to-end và chuẩn hóa bằng chứng nộp bài                                   |
-
-### Phân công chi tiết
-
-### Bảng đóng góp đã đối chiếu theo thành viên
-
-| Thành viên             | Nhiệm vụ chính                            | Commit/PR | Kết quả đóng góp                                                                               |
-| ------------------------ | -------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------- |
-| <<<<<<< Updated upstream |                                              |           |                                                                                                     |
-| Hồ Trọng Hảo          | CP3: Điều tra sự cố (Challenge Incident) | N/A       | Cách kết hợp Metrics, Traces và Logs để điều tra gốc rễ sự cố (rag_slow/latency spike). |
-
-=======
-| Trần Mạnh Hùng - 2A202601058 | Logging, correlation ID, metadata và PII redaction | `aff4f19` | Log JSON hợp lệ, có correlation ID và che dữ liệu nhạy cảm |
-| Lê Văn Tuệ - 2A202601048 | Tracing và prompt versioning | Bổ sung nếu nhóm có commit riêng | Trace v1/v2, label, version metadata và rollback evidence |
-| Nguyễn Cảnh Hoàng - 2A202601588 | Dashboard, SLO, threshold, alert và runbook | Bổ sung nếu nhóm có commit riêng | Dashboard đủ 6 panel, SLO và cảnh báo theo triệu chứng |
-| Trương Đan Vi - 2A202601178 | Điều tra challenge, root cause, report và demo | Bổ sung nếu nhóm có commit riêng | Nối Metrics → Traces → Logs, xác định `rag_slow` và đề xuất biện pháp phòng ngừa |
-| Hồ Trọng Hảo - 2A202601358 | API integration, testing và tổng hợp evidence | Bổ sung nếu nhóm có commit riêng | Kiểm tra end-to-end, validator/test suite và chuẩn hóa evidence |
-
-1. **Logging & PII:** hoàn thiện JSON logging, correlation ID, metadata, hash user ID và redaction email/điện thoại/thẻ.
-2. **Tracing & Prompt Version:** tạo trace, gắn prompt name/label/version, kiểm tra hai phiên bản và thực hiện rollback.
-3. **Dashboard, SLO & Alert:** hoàn thiện 6 panel, SLO, threshold, alert rules và runbook.
-4. **Incident, Report & Demo:** chạy challenge, nối Metrics → Traces → Logs, xác định root cause, fix và preventive measure.
-5. **API Integration, Testing & Evidence:** kiểm tra API/load test, chạy validator/test suite, thu thập ảnh/log/evidence và tổng hợp báo cáo.
-
->>>>>>> Stashed changes
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>
+| Thành viên                       | Phần việc                                         | Commit/PR         | Điều đã học                                                          |
+| ---------------------------------- | --------------------------------------------------- | ----------------- | ------------------------------------------------------------------------- |
+| Trần Mạnh Hùng - 2A202601058    | Logging, correlation ID, metadata và PII redaction | `aff4f19`       | Thiết kế log JSON, truy vết request và bảo vệ dữ liệu nhạy cảm. |
+| Lê Văn Tuệ - 2A202601048        | Tracing và prompt versioning                       | Bổ sung sau      | Phân tích span, quản lý prompt v1/v2 và rollback.                    |
+| Nguyễn Cảnh Hoàng - 2A202601588 | Dashboard, SLO, threshold, alert và runbook        | Bổ sung nếu có | Chuyển log thành metrics và thiết kế cảnh báo.                     |
+| Trương Đan Vi - 2A202601178     | Điều tra challenge, root cause và demo           | Bổ sung nếu có | Điều tra theo luồng Metrics → Traces → Logs.                         |
+| Hồ Trọng Hảo - 2A202601358      | Tổng hợp báo cáo và điều tra CP3             | N/A               | Kết hợp evidence để chứng minh root cause`rag_slow`.               |
