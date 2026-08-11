@@ -44,14 +44,15 @@ async def metrics() -> dict:
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: Request, body: ChatRequest) -> ChatResponse:
+    # Enrich — tất cả log sau đây tự động có các trường này
     bind_contextvars(
         user_id_hash=hash_user_id(body.user_id),
         session_id=body.session_id,
         feature=body.feature,
-        model=agent.model,
+        model="claude-sonnet-4-5",
         env=os.getenv("APP_ENV", "dev"),
     )
-
+    
     log.info(
         "request_received",
         service="api",

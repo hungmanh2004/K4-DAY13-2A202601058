@@ -12,7 +12,7 @@ class CorrelationIdMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         clear_contextvars()
 
-        correlation_id = request.headers.get("x-request-id") or f"req-{uuid.uuid4().hex[:8]}"
+        correlation_id = request.headers.get("x-request-id", f"req-{uuid.uuid4().hex[:8]}")
 
         bind_contextvars(correlation_id=correlation_id)
 
